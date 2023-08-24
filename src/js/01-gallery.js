@@ -3,10 +3,10 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 
 // Change code below this line
-const gallery = document.querySelector(".gallery");
+const gallery = document.querySelector('.gallery');
 let picArray = [];
-galleryItems.forEach((galleryItem) => {
-  const liItem = document.createElement("li");
+galleryItems.forEach(galleryItem => {
+  const liItem = document.createElement('li');
 
   const innerString = `<a class="gallery__item" href="${galleryItem.original}">
 <img
@@ -15,15 +15,15 @@ galleryItems.forEach((galleryItem) => {
   alt="${galleryItem.description}"
 />
 </a>`;
-  liItem.insertAdjacentHTML("beforeend", innerString);
+  liItem.insertAdjacentHTML('beforeend', innerString);
 
   picArray.push(liItem);
 });
 
 gallery.append(...picArray);
 
-new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
 

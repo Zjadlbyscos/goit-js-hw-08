@@ -10,14 +10,11 @@ player.on(
     const currentTime = data.seconds;
     localStorage.setItem('videoplayer-current-time', currentTime);
   }, 1000)
-
 );
 player
   .setCurrentTime(Number(localStorage.getItem(`videoplayer-current-time`)))
-  .then(seconds => console.log(`seconds: ${seconds} = the pause time`))
-
+  .then(seconds => console.log(`seconds: ${seconds} = the pause time`));
 
 const storedTime = localStorage.getItem('videoplayer-current-time');
 
 player.setCurrentTime(storedTime);
-
